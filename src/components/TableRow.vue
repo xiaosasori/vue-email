@@ -1,32 +1,59 @@
 <template>
-  <tr>
-    <td class="px-6 py-4 text-sm font-medium text-gray-900">
-      <p class="truncate">{{ email.from }}</p>
-      <!-- <p class="truncate w-40">{{ email.from }}</p> -->
+  <tr
+    v-bind="$attrs"
+    @click="isExpand = !isExpand"
+    class="flex flex-wrap cursor-pointer group hover:text-blue-700 md:table-row"
+  >
+    <td class="flex-auto px-6 py-4 text-sm font-medium text-gray-900 truncate order-0 group-hover:text-blue-700">
+      {{email.from}}
     </td>
-    <td class="px-6 py-4 text-sm text-gray-500 ">
+    <td class="flex-auto order-1 w-full px-6 py-4 text-sm text-gray-900 group-hover:text-blue-700">
       <div class="flex justify-between space-x-6">
         <span class="inline-block truncate">{{ email.to[0] }}<span v-if="email.to.length > 1">, ...</span></span>
-        <!-- <span class="inline-block w-52 truncate">{{ email.to[0] }}<span v-if="email.to.length > 1">, ...</span></span> -->
-        <span v-if="email.to.length > 1" class="bg-gray-500 text-white font-semibold rounded-md px-1 py-0.5">+{{email.to.length - 1}}</span>
-        <span v-else aria-hidden="true" class="px-1 py-0.5 opacity-0 pointer-events-none">+0</span>
+        <span
+          v-if="email.to.length > 1"
+          class="bg-gray-500 text-white font-semibold rounded-md px-1 py-0.5"
+        >+{{email.to.length - 1}}</span>
+        <span
+          v-else
+          aria-hidden="true"
+          class="px-1 py-0.5 opacity-0 pointer-events-none"
+        >+0</span>
       </div>
     </td>
-    <td class="px-6 py-4 text-sm text-gray-500" style="column-width: 44%">
-      <p class="truncate">
-        {{ email.subject }}
-      </p>
+    <td class="order-1 w-full px-6 py-4 text-sm text-gray-900 truncate group-hover:text-blue-700">
+      <span class="flex-auto block truncate">{{ email.subject }}</span>
     </td>
-    <td class="text-right text-sm font-medium">
+    <td class="text-sm font-medium text-right order-0 group-hover:text-blue-700">
       <template v-if="email.hasAttachment">
-        <img aria-hidden="true" class="w-5 h-5 flex" src="src/assets/icon_clip.svg" alt="attachment">
+        <img
+          aria-hidden="true"
+          class="flex w-5 h-5"
+          src="src/assets/icon_clip.svg"
+          alt="attachment image"
+        >
         <span class="sr-only">This email has attachment</span>
       </template>
     </td>
-    <td class="px-6 py-4 text-sm text-gray-500">
+    <td class="px-6 py-4 text-sm font-semibold text-gray-900 truncate order-0 group-hover:text-blue-700">
       {{ formattedDate}}
     </td>
   </tr>
+  <transition
+    enter-from-class="max-h-0"
+    enter-to-class="max-h-full"
+    enter-active-class="duration-200 transtion ease"
+    appear
+  >
+    <tr v-show="isExpand">
+      <td
+        colspan="5"
+        class="px-6 py-4 text-sm font-medium text-gray-900"
+      >
+        {{email.body}}
+      </td>
+    </tr>
+  </transition>
 </template>
 
 <script lang="ts">
@@ -37,16 +64,17 @@ export default defineComponent({
   props: {
     email: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   setup: (props) => {
-    const count = ref(0)
+    const isExpand = ref(false)
     const formattedDate = computed(() => {
       return new Date(props.email.date).toLocaleDateString()
     })
-    return { count, formattedDate }
-  }
+
+    return { isExpand, formattedDate }
+  },
 })
 </script>
 
