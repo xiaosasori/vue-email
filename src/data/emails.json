@@ -1,0 +1,116 @@
+[
+  {
+     "from":"aaa@example.com",
+     "to":[
+        "zzz.zzz@example.com"
+     ],
+     "subject":"[ HR-888 ] Notice of official announcement",
+     "date":"1/3/2021 19:20:00",
+     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": false,
+     "id": "0"
+  },
+  {
+     "from":"bbb.bbbb@examasd.qwe",
+     "to":[
+        "yyy@example.com"
+     ],
+     "subject":"[web:333] \"Web Contact\"",
+     "date":"1/3/2021 08:10:00",
+     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare arcu odio ut sem nulla.",
+     "hasAttachment": false,
+     "id": "1"
+  },
+  {
+     "from":"ccc@example.com",
+     "to":[
+        "xxx@example.com",
+        "yyqde@example.info"
+     ],
+     "subject":"Happy New Year! Greetings for the New Year.",
+     "date":"1/1/2021 06:00:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": true,
+     "id": "2"
+  },
+  {
+     "from":"ddd.dddd@example.xyz",
+     "to":[
+        "vvv.vvssssssssssv@example.com",
+        "jjasssssssss.asd@example.me"
+     ],
+     "subject":"[HR-887(Revised: Office Expansion Project Team)] Notice of off skjfhelx slfjhqw faslfkhqwev dsafqe khsf.",
+     "date":"1/3/2021 05:10:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": false,
+     "id": "3"
+  },
+  {
+     "from":"eee@example.com",
+     "to":[
+        "sss@example.com",
+        "kljassadsdsdsd@example.me",
+        "psdsdsdsoqew@example.org"
+     ],
+     "subject":"[Github] Logout page",
+     "date":"1/1/2021 05:00:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": false,
+     "id": "4"
+  },
+  {
+     "from":"fff.ffff@example.co",
+     "to":[
+        "qqq.qqq@example.com"
+     ],
+     "subject":"[dev] Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5",
+     "date":"1/1/2021 03:00:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": false,
+     "id": "5"
+  },
+  {
+     "from":"ggg@example.com",
+     "to":[
+        "ppp@example.com"
+     ],
+     "subject":"Re: [Github] Brush-up on loading animation",
+     "date":"1/1/2021 02:00:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": false,
+     "id": "6"
+  },
+  {
+     "from":"hhh.hhh@example.com",
+     "to":[
+        "ooo.ooo@example.com"
+     ],
+     "subject":"Workplace Summary for sample, Inc.: Jun 2 - Jun 9",
+     "date":"1/1/2021 01:00:00",
+     "body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+     "hasAttachment": true,
+     "id": "7"
+  },
+  {
+     "from":"issdasdii@example.com",
+     "to":[
+        "nnn@example.com"
+     ],
+     "subject":"I love you",
+     "date":"12/31/2019 08:00:00",
+     "body": "I love you",
+     "hasAttachment": true,
+     "id": "8"
+  },
+  {
+    "from":"pablo-diego@example.com",
+    "to":[
+       "pablo-newyorkverylongemail@example.com"
+    ],
+    "subject":"[info:888] ABC EQUIPMENT COMPANY",
+    "date":"12/31/2019 05:00:00",
+    "body": "ABC EQUIPMENT COMPANY",
+    "hasAttachment": false,
+    "id": "9"
+ }
+]
