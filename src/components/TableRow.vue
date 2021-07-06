@@ -2,9 +2,9 @@
   <tr
     v-bind="$attrs"
     @click="isExpand = !isExpand"
-    class="flex flex-wrap cursor-pointer group hover:text-blue-700 md:table-row"
+    class="flex flex-wrap w-screen cursor-pointer md:w-full group hover:text-blue-700 md:table-row"
   >
-    <td class="flex-auto px-6 py-4 text-sm font-medium text-gray-900 truncate order-0 group-hover:text-blue-700">
+    <td class="flex-auto px-6 py-4 text-sm font-medium text-gray-900 truncate group-hover:text-blue-700">
       {{email.from}}
     </td>
     <td class="flex-auto order-1 w-full px-6 py-4 text-sm text-gray-900 group-hover:text-blue-700">
@@ -21,8 +21,8 @@
         >+0</span>
       </div>
     </td>
-    <td class="order-1 w-full px-6 py-4 text-sm text-gray-900 truncate group-hover:text-blue-700">
-      <span class="flex-auto block truncate">{{ email.subject }}</span>
+    <td class="order-2 px-6 py-4 text-sm text-gray-900 truncate group-hover:text-blue-700">
+       {{ email.subject }}
     </td>
     <td class="text-sm font-medium text-right order-0 group-hover:text-blue-700">
       <template v-if="email.hasAttachment">
